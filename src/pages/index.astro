@@ -1,7 +1,27 @@
 ---
+import SkillIcons from "@/components/Skills";
 import Layout from "../layouts/Layout.astro";
+import { config } from "@/lib/config";
 ---
 
-<Layout title="Custom Website">
-  <h1>Hello There!</h1>
+<Layout title={config.title}>
+  <div class="flex flex-col items-start justify-center h-full space-y-10">
+    <div>
+      <h1 class="text-3xl text-left">About Me</h1>
+      <p class="text-zinc-400 text-lg">
+        Hey, i'm lasse. I'm a web developer from denmark. I have been in the programming world for almost 5 years now. I
+        currently educate myself to a web developer. Wich is also what spend the most of my free time on. I'm building
+        websites, apis and more, i would call myself a fullstack developer.
+      </p>
+    </div>
+
+    <div>
+      <h1 class="text-3xl text-left">Skills</h1>
+      <p class="text-zinc-400 text-lg">
+        Below you can see the skills/tools i use on a daily basis. I'm always open to learn new things and improve my skills.
+      </p>
+
+      <SkillIcons client:load />
+    </div>
+  </div>
 </Layout>
