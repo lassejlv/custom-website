@@ -1,12 +1,17 @@
 ---
 import { config } from "@/lib/config";
-import Theme from "@/components/Theme";
 ---
 
-<nav class="flex items-center justify-between border-b-2 border-zinc-500 py-2 px-20 gap-4 w-full">
+<nav class="flex items-center justify-between border-b-2 border-zinc-500 py-3 px-20 gap-4 w-full">
   <a href="/" class="text-xl font-bold">{config.title}</a>
 
-  <div>
-    <Theme client:load />
+  <div class="flex">
+    {
+      config.navLinks.map((l) => (
+        <a href={l.path} class="hover:text-zinc-300">
+          {l.name}
+        </a>
+      ))
+    }
   </div>
 </nav>

@@ -27,7 +27,7 @@ const { title, description } = Astro.props;
   </head>
   <body class="bg-zinc-900 text-white select-none">
     <Navbar />
-    <main class="container mx-auto py-10">
+    <main class="container mx-auto py-10 p-4">
       <slot />
     </main>
     <Footer />
@@ -37,5 +37,18 @@ const { title, description } = Astro.props;
 <style is:global>
   * {
     font-family: "Poppins", sans-serif;
+  }
+
+  input,
+  textarea {
+    @apply outline-none rounded-md bg-zinc-800 text-white p-2;
+  }
+
+  label {
+    @apply block text-sm;
+  }
+
+  button[type="submit"] {
+    @apply bg-white text-zinc-700 p-2 rounded-md;
   }
 </style>

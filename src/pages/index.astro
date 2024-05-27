@@ -23,5 +23,28 @@ import { config } from "@/lib/config";
 
       <SkillIcons client:load />
     </div>
+
+    <div>
+      <h1 class="text-3xl text-left">Projects</h1>
+      <p class="text-zinc-400 text-lg">Here are some of the projects i have been working/work on</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-4">
+        {
+          config.projects.map((p) => (
+            <div class="flex flex-col bg-zinc-800 p-3 rounded-md items-center">
+              <div>
+                <h2 class="text-xl">{p.name}</h2>
+                <p class="text-zinc-400 text-lg">{p.description}</p>
+              </div>
+              {p.link && (
+                <a href={p.link} target="_blank" class="text-blue-500 font-bold">
+                  View
+                </a>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </Layout>
