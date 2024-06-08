@@ -25,6 +25,7 @@ import {
 
 type Config = {
   title: string;
+  github_url: string;
   skills: { name: string; icon: JSX.Element }[];
   navLinks: { name: string; path: string }[];
   projects: { name: string; description: string; link?: string }[];
@@ -34,6 +35,7 @@ const size = 30;
 
 export const config: Config = {
   title: "lasse",
+  github_url: "https://github.com/lassejlv/custom-website",
   skills: [
     {
       name: "Node.js",

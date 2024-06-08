@@ -1,9 +1,18 @@
 ---
 import { config } from "@/lib/config";
+import { Github } from "lucide-astro";
 ---
 
 <footer class="fixed bottom-0 left-0 right-0 z-50 flex px-4 items-center h-12 text-white backdrop-blur-md">
-  <p class="text-sm">
-    &copy; {new Date().getFullYear()} - <span class="font-bold">{config.title}</span>
+  <p class="flex gap-5 text-sm">
+    &copy; {new Date().getFullYear()} - <span class="font-bold">{config.title}</span> - <a
+      href={config.github_url}
+      class="flex items-center"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Github class="w-4 h-4 mr-1" />
+      <span>Source</span>
+    </a>
   </p>
 </footer>
