@@ -25,6 +25,8 @@ import {
 
 type Config = {
   title: string;
+  avatar: string;
+  email: string;
   github_url: string;
   skills: { name: string; icon: JSX.Element }[];
   navLinks: { name: string; path: string }[];
@@ -35,6 +37,8 @@ const size = 30;
 
 export const config: Config = {
   title: "lasse",
+  avatar: "https://github.com/lassejlv.png",
+  email: "hi@lassejlv.dk",
   github_url: "https://github.com/lassejlv/custom-website",
   skills: [
     {
@@ -134,6 +138,16 @@ export const config: Config = {
   ],
   projects: [
     {
+      name: "Writee",
+      description: "the next-gen note-taking app for anyone powered by AI. (Coming soon)",
+      link: "https://getwritee.com",
+    },
+    {
+      name: "Prismo",
+      description: "a prisma-like kinda ORM for Turso using it's restful API.",
+      link: "https://github.com/lassejlv/prismo",
+    },
+    {
       name: "Rapide",
       description: "a simple, fast, and easy-to-use web server framework for Bun.js",
       link: "https://github.com/lassejlv/rapide",
@@ -141,12 +155,12 @@ export const config: Config = {
     {
       name: "Includer.js",
       description:
-        "A tiny JavaScript library that enables you to inject HTML content into the current page from external HTML files.",
+        "a tiny JavaScript library that enables you to inject HTML content into the current page from external HTML files.",
       link: "https://github.com/lassejlv/includerjs",
     },
     {
       name: "Movie Swiper",
-      description: "A global discord that allows you to swipe between movies. Over 2000 humans uses it every day.",
+      description: "a global discord that allows you to swipe between movies. Over 2300 people uses it every day.",
       link: "https://movieswiper.xyz",
     },
   ],
