@@ -24,7 +24,7 @@ if (Astro.request.method === "POST") {
   const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
-    from: `New Message From Portfolio <${import.meta.env.FROM_EMAIL}>`,
+    from: `New Message From Portfolio <${email}>`,
     to: [import.meta.env.CONTACT_EMAIL],
     subject: `New Message From ${name}`,
     html: `<h1>${name}</h1><p>${message}</p><br><p>${email}</p><br>${new Date().toISOString()}`,
